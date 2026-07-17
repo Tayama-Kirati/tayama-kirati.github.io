@@ -1,0 +1,8 @@
+{
+  "status": "in_progress",
+  "created": "2026-07-11",
+  "entries": [
+    { "date": "2026-07-11", "summary": "Created task: writing summary about me" },
+    { "date": "2026-07-11", "summary": "Fetched https://dakingrai.github.io/#papers as a style reference and drafted 3 bio options in artifacts/bio-draft.md, based on the stack in src/data/skills.js. Flagged mismatch with the current UI/UX-designer placeholder bio in Home.jsx. Left as todo pending user's answers to open questions (current status, identity framing, focus area)." }
+  ]
+}
