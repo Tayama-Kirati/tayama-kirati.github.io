@@ -1,6 +1,6 @@
 import { FileText } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import profile from '../assets/profile.png';
+import profile from '../assets/profile.jpg';
 
 const BIO =
   "I'm a passionate and detail-oriented designer who enjoys turning ideas into meaningful digital experiences. With a strong interest in user-centered design, I focus on creating clean, intuitive, and visually engaging interfaces that solve real problems. I love exploring tools like Figma and continuously learning new design trends to improve my skills. Whether working independently or collaborating with a team, I aim to deliver thoughtful, functional, and impactful design solutions that enhance user satisfaction and bring ideas to life.";

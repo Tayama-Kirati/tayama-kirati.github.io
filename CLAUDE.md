@@ -87,7 +87,7 @@ portfolio2/                      # repo name: tayamakirati.github.io
       skills.js             # array of { title, skills: [{ name, icon }] }
       education.js          # array of { school, degree, period }
     assets/
-      profile.png
+      profile.jpg
       projects/            # project screenshots
     App.jsx                # HashRouter + routes
     main.jsx
@@ -120,9 +120,6 @@ npm run preview   # preview production build
 - `LINKEDIN_URL` in `src/pages/Home.jsx` and `src/pages/Contact.jsx` is
   still a placeholder (`https://linkedin.com/`) — fill in the real profile
   URL. `GITHUB_URL` is filled in (`https://github.com/Tayama-Kirati`).
-- `src/assets/profile.png` is ~4.7MB (copied from the source photo
-  as-is) — compress it before deploying, since it's the largest asset on
-  the site by far.
 
 ## Conventions
 
