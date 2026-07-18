@@ -51,9 +51,14 @@ hosting without extra server config — routes resolve as `/#/projects`,
 
 ## Hosting (GitHub Pages)
 
-- Repo must be named `tayamakirati.github.io` (the special user-site repo
-  name) so it serves at `https://tayamakirati.github.io` with **no base
-  path** needed — `vite.config.js` leaves `base: '/'` (the default).
+- Repo must be named `tayama-kirati.github.io` (matching the GitHub
+  username `Tayama-Kirati` exactly, hyphen included — this is the special
+  user-site repo name) so it serves at `https://tayama-kirati.github.io`
+  with **no base path** needed — `vite.config.js` leaves `base: '/'` (the
+  default). A repo name that doesn't exactly match the username (e.g. the
+  original `tayamakirati.github.io` without the hyphen) gets treated as an
+  ordinary project repo and serves nested under a path instead of at the
+  root.
 - Deployed automatically via `.github/workflows/deploy.yml` on every push to
   `main`: builds with Vite, publishes `dist/` to GitHub Pages using
   `actions/deploy-pages`. No manual `npm run deploy` step.
@@ -65,7 +70,7 @@ hosting without extra server config — routes resolve as `/#/projects`,
 ## Structure
 
 ```
-portfolio2/                      # repo name: tayamakirati.github.io
+portfolio2/                      # repo name: tayama-kirati.github.io
   .github/
     workflows/
       deploy.yml          # build + deploy to GitHub Pages on push to main
