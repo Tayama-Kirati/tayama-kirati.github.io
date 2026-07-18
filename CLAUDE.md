@@ -2,32 +2,38 @@
 
 Personal portfolio site for Tayama Kirati. Scaffolded and implemented.
 
-Design reference: https://dakingrai.github.io — a clean, text-focused
-personal site with a top nav bar and a header combining photo, bio, and
-quick links. Adapted here for a developer portfolio (Projects/Skills instead
-of Papers/Talks).
+Design reference: https://dakingrai.github.io — a clean, text-focused,
+single-page personal site with a top nav bar (links jump-scroll to
+sections) and a header combining photo, bio, and quick links. Adapted here
+for a developer portfolio (Projects/Skills instead of Papers/Talks).
 
 ## Purpose
 
-A multi-page personal portfolio with a persistent top nav bar (Home /
-Projects / Skills / Education / Contact):
+A single-page personal portfolio: all sections are stacked on one scrollable
+page, with a persistent top nav bar (Home / Projects / Skills / Education /
+Contact) whose links jump-scroll to the matching section (`#home`,
+`#projects`, `#skills`, `#education`, `#contact`) rather than navigating to
+separate routes:
 
 - **Home** — profile photo, name, short bio/tagline, and a quick links row
   (Resume, GitHub, LinkedIn)
-- **Projects** — dedicated page; cards per project with title, description,
-  tech stack used, screenshot, and links (live demo / GitHub repo)
-- **Skills** — dedicated page; technologies and tools grouped by category
-  (e.g. languages, frameworks, tools)
-- **Education** — dedicated page; school, degree, and period per entry
-- **Contact** — dedicated page; email and social links (GitHub, LinkedIn,
-  resume)
+- **Projects** — cards per project with title, description, tech stack
+  used, screenshot, and links (live demo / GitHub repo)
+- **Skills** — technologies and tools grouped by category (e.g. languages,
+  frameworks, tools)
+- **Education** — school, degree, and period per entry
+- **Contact** — email and social links (GitHub, LinkedIn, resume)
 
 ## Design Notes
 
-- Persistent top horizontal nav bar linking to the four pages, visible on
-  every page (`src/components/Nav.jsx`).
+- Persistent, sticky top horizontal nav bar with anchor links that
+  smooth-scroll to each section (`src/components/Nav.jsx`;
+  `scroll-behavior: smooth` set globally in `src/index.css`). Each section
+  has `scroll-mt-20` so the sticky nav doesn't cover its heading when jumped
+  to.
 - Clean, text-focused layout with minimal visual decoration — thin borders,
-  no heavy shadows.
+  no heavy shadows. Section headings have a thin bottom border to separate
+  them visually while scrolling, matching the reference's `h2` style.
 - Home hero is a side-by-side layout (photo left, name/bio/links right on
   desktop; stacks on mobile) matching the reference's `profile-container`.
 - Serif typeface (`Merriweather`, loaded via Google Fonts in `index.html`,
@@ -40,20 +46,14 @@ Projects / Skills / Education / Contact):
 ## Tech Stack
 
 - React 19 + Vite 8
-- `react-router-dom` v7 for multi-page routing
 - Tailwind CSS v4 via the `@tailwindcss/vite` plugin (no separate postcss
   config; `@import "tailwindcss";` in `src/index.css`)
 - `lucide-react` for general icons (Mail, FileText, ExternalLink) —
   **note**: this version dropped brand/logo icons, so GitHub/LinkedIn icons
   come from `react-icons/fa` (`FaGithub`, `FaLinkedin`) instead
 - Deployment target: **GitHub Pages**, served at the root domain
-
-### Routing on GitHub Pages
-
-Uses `HashRouter` (not `BrowserRouter`) so direct links and page refreshes to
-`/projects`, `/skills`, `/contact` work correctly on GitHub Pages' static
-hosting without extra server config — routes resolve as `/#/projects`,
-`/#/skills`, etc.
+- No router: it's a single page, so `App.jsx` renders all sections directly
+  inside `Layout` — no `react-router-dom` dependency.
 
 ## Hosting (GitHub Pages)
 
@@ -84,15 +84,15 @@ portfolio2/                      # repo name: tayama-kirati.github.io
     resume.pdf
   src/
     components/
-      Nav.jsx              # top nav bar, persistent across pages
-      Layout.jsx           # wraps pages with Nav via <Outlet/>
+      Nav.jsx              # sticky top nav bar, anchor links to sections
+      Layout.jsx           # wraps sections with Nav, renders {children}
       ProjectCard.jsx
     pages/
-      Home.jsx             # photo, bio, quick links
-      Projects.jsx
-      Skills.jsx
-      Education.jsx
-      Contact.jsx
+      Home.jsx             # <section id="home"> — photo, bio, quick links
+      Projects.jsx         # <section id="projects">
+      Skills.jsx           # <section id="skills">
+      Education.jsx        # <section id="education">
+      Contact.jsx          # <section id="contact">
     data/
       projects.js          # array of { title, description, stack, image, links }
       skills.js             # array of { title, skills: [{ name, icon }] }
@@ -100,7 +100,7 @@ portfolio2/                      # repo name: tayama-kirati.github.io
     assets/
       profile.jpg
       projects/            # project screenshots
-    App.jsx                # HashRouter + routes
+    App.jsx                # composes all sections inside Layout, in order
     main.jsx
     index.css               # Tailwind import + CSS vars (--accent, --ink, --bg)
   index.html

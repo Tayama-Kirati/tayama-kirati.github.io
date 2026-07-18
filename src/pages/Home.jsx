@@ -11,7 +11,7 @@ const LINKEDIN_URL = 'https://www.linkedin.com/in/tayama-kirati-0359372b8/';
 
 export default function Home() {
   return (
-    <section className="flex flex-col md:flex-row gap-10 items-start">
+    <section id="home" className="scroll-mt-20 flex flex-col md:flex-row gap-10 items-start">
       <img
         src={profile}
         alt="Tayama Kirati"

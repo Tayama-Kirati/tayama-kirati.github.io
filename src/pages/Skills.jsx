@@ -36,15 +36,17 @@ const ICONS = {
 
 export default function Skills() {
   return (
-    <section>
-      <h1 className="text-2xl font-bold text-[var(--ink)] mb-8 text-center">Skills</h1>
+    <section id="skills" className="scroll-mt-20">
+      <h2 className="text-2xl font-bold text-[var(--ink)] mb-8 pb-2 border-b border-black/10 text-center">
+        Skills
+      </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {skillCategories.map((cat) => (
           <div key={cat.title} className="border border-black/10 rounded-xl p-6">
-            <h2 className="text-sm font-semibold text-[var(--ink)]/70 mb-4 text-center uppercase tracking-wide">
+            <h3 className="text-sm font-semibold text-[var(--ink)]/70 mb-4 text-center uppercase tracking-wide">
               {cat.title}
-            </h2>
+            </h3>
             <div className="flex flex-wrap gap-2 justify-center">
               {cat.skills.map((skill) => {
                 const Icon = ICONS[skill.icon];

@@ -15,8 +15,8 @@ const LINKS = [
 
 export default function Contact() {
   return (
-    <section className="text-center">
-      <h1 className="text-2xl font-bold text-[var(--ink)] mb-3">Get In Touch</h1>
+    <section id="contact" className="scroll-mt-20 text-center">
+      <h2 className="text-2xl font-bold text-[var(--ink)] mb-3">Get In Touch</h2>
       <p className="text-[var(--ink)]/60 text-sm mb-10">
         Have a project in mind or want to collaborate? Feel free to reach out.
       </p>
