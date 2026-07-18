@@ -51,7 +51,7 @@ export default function Skills() {
                 return (
                   <span
                     key={skill.name}
-                    className="inline-flex items-center gap-2 bg-[var(--gold)] text-white px-3 py-1.5 rounded-full text-sm font-medium"
+                    className="inline-flex items-center gap-2 bg-[var(--accent)] text-white px-3 py-1.5 rounded-full text-sm font-medium"
                   >
                     {Icon && <Icon size={14} />}
                     {skill.name}

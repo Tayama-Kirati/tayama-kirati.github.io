@@ -28,8 +28,14 @@ Projects / Skills / Education / Contact):
   every page (`src/components/Nav.jsx`).
 - Clean, text-focused layout with minimal visual decoration — thin borders,
   no heavy shadows.
-- Profile photo placed prominently near the top of the Home page.
-- Accent color is gold (`--gold: #b8860b`), defined in `src/index.css`.
+- Home hero is a side-by-side layout (photo left, name/bio/links right on
+  desktop; stacks on mobile) matching the reference's `profile-container`.
+- Serif typeface (`Merriweather`, loaded via Google Fonts in `index.html`,
+  falling back to Georgia/serif) and off-white page background
+  (`--bg: #fafafa`), matching the reference's body styling.
+- Accent color is a muted blue (`--accent: #4f6d9e` / `--accent-dark:
+  #3c5680`), matching the reference's link color — defined in
+  `src/index.css`.
 
 ## Tech Stack
 
@@ -96,7 +102,7 @@ portfolio2/                      # repo name: tayama-kirati.github.io
       projects/            # project screenshots
     App.jsx                # HashRouter + routes
     main.jsx
-    index.css               # Tailwind import + CSS vars (--gold, --ink)
+    index.css               # Tailwind import + CSS vars (--accent, --ink, --bg)
   index.html
   package.json
   vite.config.js

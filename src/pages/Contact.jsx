@@ -31,7 +31,7 @@ export default function Contact() {
             download={download}
             className="flex flex-col items-center gap-2 group"
           >
-            <span className="w-14 h-14 rounded-full bg-[var(--gold)] flex items-center justify-center shadow group-hover:bg-[var(--gold-dark)] transition-colors">
+            <span className="w-14 h-14 rounded-full bg-[var(--accent)] flex items-center justify-center shadow group-hover:bg-[var(--accent-dark)] transition-colors">
               <Icon size={20} className="text-white" />
             </span>
             <span className="font-semibold text-sm">{label}</span>

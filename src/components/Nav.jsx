@@ -19,7 +19,7 @@ export default function Nav() {
             end={end}
             className={({ isActive }) =>
               `text-sm font-medium transition-colors ${
-                isActive ? 'text-[var(--gold)]' : 'text-[var(--ink)]/70 hover:text-[var(--gold)]'
+                isActive ? 'text-[var(--accent)]' : 'text-[var(--ink)]/70 hover:text-[var(--accent)]'
               }`
             }
           >

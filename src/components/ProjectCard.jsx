@@ -18,7 +18,7 @@ export default function ProjectCard({ title, description, stack, image, links })
           {stack.map((tech) => (
             <span
               key={tech}
-              className="text-xs font-medium text-[var(--gold)] bg-[var(--gold)]/10 px-2 py-1 rounded"
+              className="text-xs font-medium text-[var(--accent)] bg-[var(--accent)]/10 px-2 py-1 rounded"
             >
               {tech}
             </span>
@@ -31,7 +31,7 @@ export default function ProjectCard({ title, description, stack, image, links })
               href={links.demo}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-1.5 text-sm font-medium hover:text-[var(--gold)] transition-colors"
+              className="flex items-center gap-1.5 text-sm font-medium hover:text-[var(--accent)] transition-colors"
             >
               <ExternalLink size={14} /> Live demo
             </a>
@@ -41,7 +41,7 @@ export default function ProjectCard({ title, description, stack, image, links })
               href={links.repo}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-1.5 text-sm font-medium hover:text-[var(--gold)] transition-colors"
+              className="flex items-center gap-1.5 text-sm font-medium hover:text-[var(--accent)] transition-colors"
             >
               <FaGithub size={14} /> Repo
             </a>

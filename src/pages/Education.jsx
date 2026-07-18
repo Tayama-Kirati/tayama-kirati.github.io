@@ -9,7 +9,7 @@ export default function Education() {
         {education.map((item) => (
           <div key={item.school} className="border border-black/10 rounded-xl p-6">
             <h2 className="font-bold text-lg text-[var(--ink)]">{item.degree}</h2>
-            <p className="text-[var(--gold)] font-medium text-sm mt-1">{item.school}</p>
+            <p className="text-[var(--accent)] font-medium text-sm mt-1">{item.school}</p>
             <p className="text-[var(--ink)]/60 text-sm mt-1">{item.period}</p>
           </div>
         ))}
