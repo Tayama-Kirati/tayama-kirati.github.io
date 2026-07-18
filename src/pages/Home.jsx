@@ -7,7 +7,7 @@ const BIO =
 
 const GITHUB_URL = 'https://github.com/Tayama-Kirati';
 // TODO: replace with your real LinkedIn profile URL.
-const LINKEDIN_URL = 'https://linkedin.com/';
+const LINKEDIN_URL = 'https://www.linkedin.com/in/tayama-kirati-0359372b8/';
 
 export default function Home() {
   return (

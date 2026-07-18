@@ -115,12 +115,6 @@ npm run preview   # preview production build
   same data shape; social URLs are set directly in `Home.jsx` / `Contact.jsx`
   (`GITHUB_URL`, `LINKEDIN_URL` constants).
 
-## Known TODOs
-
-- `LINKEDIN_URL` in `src/pages/Home.jsx` and `src/pages/Contact.jsx` is
-  still a placeholder (`https://linkedin.com/`) — fill in the real profile
-  URL. `GITHUB_URL` is filled in (`https://github.com/Tayama-Kirati`).
-
 ## Conventions
 
 - Functional components with hooks only (no class components).

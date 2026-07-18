@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 const EMAIL = 'tayamakirati@gmail.com';
 const GITHUB_URL = 'https://github.com/Tayama-Kirati';
 // TODO: replace with your real LinkedIn profile URL.
-const LINKEDIN_URL = 'https://linkedin.com/';
+const LINKEDIN_URL = 'https://www.linkedin.com/in/tayama-kirati-0359372b8/';
 
 const LINKS = [
   { href: `mailto:${EMAIL}`, icon: Mail, label: 'Email', value: EMAIL },
